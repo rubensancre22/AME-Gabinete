@@ -207,10 +207,16 @@
         font-size: 20px;
     }
 
-    .Posicion-imagen .Texto-centro {
+    .Texto-centro{
         text-align: center;
         font-family: "Delius", serif;
+        margin-top: -30px;
 
+    }
+
+    .Posicion-imagen {
+        text-align: center;
+        font-family: "Delius", serif;
     }
 
     .imagen1 img {
@@ -334,7 +340,7 @@
     /* Estilo para el selector de idiomas */
     .idioma-selector {
         position: fixed;
-        top: 720px;
+        top: 650px;
         right: 10px;
         padding: 10px 15px;
         border-radius: 8px;
@@ -771,6 +777,7 @@
         margin-left: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
         margin-right: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
         font-size: 20px;
+        margin-top: 40px;
 
       }
       
