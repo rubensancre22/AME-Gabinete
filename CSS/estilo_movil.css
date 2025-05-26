@@ -173,7 +173,7 @@
         font-family: 'Delius';
         color: #ffffff;
         margin-left: 25px;
-        width: 350px;
+        width: 300px;
         }
         
         #psicologa span {
@@ -321,20 +321,20 @@
     }
     
     .whatsapp-icon {
-        bottom: 20px;
+        bottom: 10px;
         left: 20px;
     }
     
     .whatsapp-icon-img {
-        width: 30px;
-        height: 30px;
+        width: 60px;
+        height: 60px;
         object-fit: cover;
     }
     
     /* Estilo para el selector de idiomas */
     .idioma-selector {
         position: fixed;
-        top: 520px;
+        top: 720px;
         right: 10px;
         padding: 10px 15px;
         border-radius: 8px;
@@ -589,7 +589,7 @@
     padding: 20px;
     background-color: #c36f96; /* No se cambia */
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 300px;
     }
 
     .seccion-psicopedagogia h1, .seccion-psicopedagogia2 h1 {
