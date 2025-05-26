@@ -332,15 +332,15 @@
     }
     
     .whatsapp-icon-img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         object-fit: cover;
     }
     
     /* Estilo para el selector de idiomas */
     .idioma-selector {
         position: fixed;
-        top: 650px;
+        top: 680px;
         right: 10px;
         padding: 10px 15px;
         border-radius: 8px;
