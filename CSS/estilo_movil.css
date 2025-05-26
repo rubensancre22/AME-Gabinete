@@ -678,29 +678,9 @@
         color: #a31c5b;
         font-family: 'Delius', sans-serif;
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         padding: 20px 0;
     }
-    
-    h1.titulo-instalaciones {
-        background-color: white;
-        max-width: 100%;
-        color: #a31c5b;
-        font-family: 'Delius', sans-serif;
-        text-align: center;
-        font-size: 30px;
-        padding: 20px 0;
-    }
-
-    .titulo2-instalaciones {
-        background-color: white;
-        width: 100%;
-        color: #a31c5b;
-        font-family: 'Delius', sans-serif;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 2.5rem; /* Cambié el tamaño de la fuente */
-    } 
 
     .instalaciones {
         display: flex;
