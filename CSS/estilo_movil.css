@@ -173,7 +173,7 @@
         font-family: 'Delius';
         color: #ffffff;
         margin-left: 25px;
-        width: 400px;
+        width: 350px;
         }
         
         #psicologa span {
@@ -334,7 +334,7 @@
     /* Estilo para el selector de idiomas */
     .idioma-selector {
         position: fixed;
-        top: 820px;
+        top: 520px;
         right: 10px;
         padding: 10px 15px;
         border-radius: 8px;
