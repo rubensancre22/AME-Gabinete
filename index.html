@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AME Gabinete - Apoyo psicopedagógico especializado en niños y adolescentes">
+    <link rel="icon" href="/IMAGENES/Icono AME Gabinete.jpg" type="image/jpg">
+    <title>AME Gabinete | Inicio</title>
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <link rel="stylesheet" href="/CSS/estilo_tablet.css">
+    <link rel="stylesheet" href="/CSS/estilo_movil.css">
+    <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    
+
+    <script>
+        function cambiarIdiomaPorBanderas(idioma) {
+            localStorage.setItem('idioma', idioma);
+            const textos = {
+                'es': {
+                    'bienvenida': '¡Bienvenid@s a AME Gabinete!',
+                    'psicologa': 'En nuestro gabinete psicopedagógico ofrecemos un entorno divertido y educativo donde los niños y adolescentes aprenden a través de juegos 🎲, talleres 🎭, actividades 🎒 y excursiones 🛝. Fomentamos el desarrollo cognitivo y emocional de manera creativa, dando herramientas para que cada niño y adolescente crezca mientras disfruta. ¡El aprendizaje nunca fue tan divertido! 👨‍👩‍👧‍👦✨',
+                    'inicio': 'Inicio',
+                    'servicios': 'Servicios',
+                    'contacto': 'Contáctanos',
+                    'horario': 'Horario',
+                    'pide_cita': 'Pide Cita',
+                    'que_ofrecemos': '¿Qué ofrecemos?',
+                    'mucho_mas': '¡Y mucho más!',
+                    'descubre_antes': 'Descubre todos nuestros servicios',
+                    'descubre_link': 'dando clic aquí',
+                    'psicopedagogia_titulo': '¿Sabes lo qué es la psicopedagogía?',
+                    'psicopedagogia_texto': 'La psicopedagogía trata de ver cómo aprendemos y nos desarrollamos a lo largo de toda nuestra vida, tanto en la infancia como en la edad adulta. Ayuda a entender los problemas que podemos tener a la hora de aprender y ofrece herramientas y consejos para mejorar tanto en el estudio como en el día a día, ayudando a que nos sintamos mejor con nosotros mismos.',
+                    'diferencias_titulo': '¿Sabes cuál es la diferencia entre un psicopedagogo y un psicólogo?',
+                    'diferencias_texto': 'Un <strong>psicólogo</strong> se centra en el estudio de la mente, las emociones y el comportamiento humano, cómo los problemas de salud mental, emociones y relaciones interpersonales.<br><br>Un <strong>psicopedagogo</strong>, en cambio, se especializa en el proceso de aprendizaje, ayudando a niños, adolescentes y adultos con dificultades académicas, trastornos del aprendizaje o problemas de adaptación escolar.',
+                    'instalaciones': 'Instalaciones',
+                    'quienes_somos': 'Quiénes Somos',
+                    'opiniones': 'Conoce lo que opinan sobre nosotros',
+                    'holaSoy': 'Hola, soy Arantxa'
+
+                },
+
+                'ca': {
+                    'bienvenida': 'Benvinguts a AME Gabinete!',
+                    'psicologa': 'Al nostre gabinet psicopedagògic oferim un entorn divertit i educatiu on els xiquets aprenen a través de jocs 🎲, tallers 🎭, activitats 🎒 i eixides 🛝. Fomentem el desenvolupament cognitiu i emocional de manera creativa, proporcionant ferramentes perquè cada xiquet cresca mentre s’ho passa bé. Aprendre mai no havia sigut tan divertit! 👨‍👩‍👧‍👦✨',
+                    'inicio': 'Inici',
+                    'servicios': 'Servicis',
+                    'contacto': 'Contacta\'ns',
+                    'horario': 'Horari',
+                    'pide_cita': 'Demana Cita',
+                    'que_ofrecemos': 'Què oferim?',
+                    'mucho_mas': 'I molt més!',
+                    'descubre_antes': 'Descobrix tots els nostres serveis',
+                    'descubre_link': 'fent clic ací',
+                    'psicopedagogia_titulo': 'Saps què és la psicopedagogia?',
+                    'psicopedagogia_texto': 'La psicopedagogia tracta de veure com aprenem i ens desenvolupem al llarg de tota la nostra vida, tant en la infància com en l\'edat adulta. Ajuda a entendre els problemes que podem tindre a l\'hora d\'aprendre i oferix ferramentes i consells per a millorar tant en l\'estudi com en el dia a dia, ajudant-nos a sentir-nos millor amb nosaltres mateixos.',
+                    'diferencias_titulo': 'Saps quina és la diferència entre un psicopedagog i un psicòleg?',
+                    'diferencias_texto': 'Un <strong>psicòleg</strong> se centra en l\'estudi de la ment, les emocions i el comportament humà, com ara els problemes de salut mental, emocions i relacions interpersonals.<br><br>Un <strong>psicopedagog</strong>, en canvi, està especialitzat en el procés d\'aprenentatge, ajudant xiquets, adolescents i adults amb dificultats acadèmiques, trastorns de l\'aprenentatge o problemes d\'adaptació escolar.',
+                    'instalaciones': 'Instal·lacions',
+                    'quienes_somos': 'Qui som',
+                    'opiniones': 'Descobrix què opinen sobre nosaltres',
+                    'holaSoy': 'Hola, sóc Arantxa'
+                },
+
+                'en': {
+                    'bienvenida': 'Welcome to AME Gabinete!',
+                    'psicologa': 'In our psychopedagogical cabinet, we offer a fun and educational environment where children and adolescents learn through games 🎲, workshops 🎭, activities 🎒, and outings 🛝. We promote cognitive and emotional development in a creative way, providing tools for each child and adolescent to grow while enjoying. Learning has never been so fun! 👨‍👩‍👧‍👦✨',
+                    'inicio': 'Home',
+                    'servicios': 'Services',
+                    'contacto': 'Contact Us',
+                    'horario': 'Schedule',
+                    'pide_cita': 'Make an Appointment',
+                    'que_ofrecemos': 'What do we offer?',
+                    'mucho_mas': 'And much more!',
+                    'descubre_antes': 'Discover all our services',
+                    'descubre_link': 'by clicking here',
+                    'psicopedagogia_titulo': 'Do you know what psychopedagogy is?',
+                    'psicopedagogia_texto': 'Psychopedagogy studies how we learn and develop throughout life, both in childhood and adulthood. It helps understand the difficulties we may have when learning and offers tools and advice to improve academically and personally.',
+                    'diferencias_titulo': 'Do you know the difference between a psychopedagogue and a psychologist?',
+                    'diferencias_texto': 'A <strong>psychologist</strong> focuses on the study of the mind, emotions, and human behavior, such as mental health issues, emotions, and interpersonal relationships.<br><br>A <strong>psychopedagogue</strong>, on the other hand, specializes in the learning process, helping children, teens, and adults with academic difficulties, learning disorders, or school adaptation problems.',
+                    'instalaciones': 'Facilities',
+                    'quienes_somos': 'Who we are',
+                    'opiniones': 'See what people say about us',
+                    'holaSoy': 'Hello, I’m Arantxa'
+
+                }
+            };
+    
+            document.getElementById('bienvenida').innerText = textos[idioma]['bienvenida'];
+            document.getElementById('psicologa').innerText = textos[idioma]['psicologa'];
+            document.getElementById('inicio').innerText = textos[idioma]['inicio'];
+            document.getElementById('servicios').innerText = textos[idioma]['servicios'];
+            document.getElementById('contacto').innerText = textos[idioma]['contacto'];
+            document.getElementById('instalaciones').innerText = textos[idioma]['instalaciones'];
+            document.getElementById('quienes_somos').innerText = textos[idioma]['quienes_somos'];
+            document.getElementById('descubre_antes').innerText = textos[idioma]['descubre_antes'];
+            document.getElementById('descubre_link').innerText = textos[idioma]['descubre_link'];
+            document.querySelector('.que-ofrecemos h1').innerText = textos[idioma]['que_ofrecemos'];
+            document.querySelector('.mucho-mas h2').innerText = textos[idioma]['mucho_mas'];
+            document.querySelector('.seccion-psicopedagogia h1').innerText = textos[idioma]['psicopedagogia_titulo'];
+            document.querySelector('.seccion-psicopedagogia h2').innerText = textos[idioma]['psicopedagogia_texto'];
+            document.querySelector('.seccion-psicopedagogia2 h1').innerText = textos[idioma]['diferencias_titulo'];
+            document.querySelector('.seccion-psicopedagogia2 h2').innerHTML = textos[idioma]['diferencias_texto'];
+            document.getElementById('opiniones-titulo').textContent = textos[idioma]['opiniones'];
+            document.getElementById('holaSoy').innerText = textos[idioma]['holaSoy'];
+
+
+        }
+    
+        window.onload = function () {
+            const idiomaGuardado = localStorage.getItem('idioma') || 'es';
+            cambiarIdiomaPorBanderas(idiomaGuardado);
+        };
+    </script>
+    
+</head>
+
+<body>
+    <nav class="barra-navegacion">
+        <div class="nav-container">
+            <img src="/IMAGENES/Logo AME 2021(1).png" alt="Logo AME Gabinete" class="logo-barra" draggable="false">
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html" id="inicio">Inicio</a></li>
+                <li><a href="servicios.html" id="servicios">Servicios</a></li>
+                <li><a href="quienessomos.html" id="quienes_somos">Quiénes Somos</a></li>
+                <li><a href="Instalaciones.html" id="instalaciones">Instalaciones</a></li>
+                <li><a href="contacto.html" id="contacto">Contáctanos</a></li>
+            </ul>
+
+            <div class="idioma-selector">
+                <img src="/IMAGENES/Iconos/Es.png" alt="Español" class="bandera" onclick="cambiarIdiomaPorBanderas('es')" />
+                <img src="/IMAGENES/Iconos/Val.png" alt="Valencià" class="bandera" onclick="cambiarIdiomaPorBanderas('ca')" />
+                <img src="/IMAGENES/Iconos/En.png" alt="English" class="bandera" onclick="cambiarIdiomaPorBanderas('en')" />
+            </div>
+        </div>
+    </nav>
+
+        
+    <a href="https://wa.me/34610447906" class="whatsapp-icon" target="_blank">
+        <img src="/IMAGENES/whatsapp logo.png" alt="" class="whatsapp-icon-img">
+    </a>
+
+    <a href="tel:+34610447906" class="llamar-icon" target="_blank">
+        <img src="/IMAGENES/phone.png" alt="" class="whatsapp-icon-img">
+    </a>
+
+    <br><br><br><br>
+    <section class="Bienvenido">
+        <h2 id="bienvenida">¡Bienvenid@s a AME Gabinete!</h2>
+    </section>
+
+    <div class="Posicion-imagen">
+        
+        <div class="Texto">
+            
+            <h3 class="Texto-centro" id="holaSoy">Hola, soy Arantxa</h3>
+            
+            <img src="/IMAGENES/Fotos/Arantxa Montaner Enri.jpeg" alt="Arantxa Montaner Enri" class="Arantxa">
+
+            <nav id="psicologa">
+                En ARANTXA MONTANER ENRI, nuestro gabinete psicopedagógico ofrece un entorno divertido y educativo donde los niños aprenden a través de 
+                <span>juegos 🎲</span>, 
+                <span>talleres 🎭</span>, 
+                <span>actividades 🎒</span> y 
+                <span>excursiones 🛝</span>. 
+                Fomentamos el desarrollo cognitivo y emocional de manera creativa, brindando herramientas para que cada niño crezca mientras disfruta. 
+                ¡El aprendizaje nunca fue tan divertido! 👨‍👩‍👧‍👦✨
+            </nav>
+            
+        
+        </div>
+    </div>
+    <script>
+
+        let currentIndex = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.imagen');
+            const totalSlides = slides.length;
+            currentIndex = (currentIndex + step + totalSlides) % totalSlides; 
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const slides = document.querySelector('.carrusel');
+            const newTransform = -currentIndex * 100; 
+            slides.style.transform = `translateX(${newTransform}%)`;
+        }
+
+        updateCarousel();
+
+    </script>
+
+<div class="carrusel-container">
+    <div class="carrusel" id="carrusel">
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 5.jpeg" alt="Ejemplo 3" class="imagen-borde"></div>
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 8.jpeg" alt="Ejemplo 2" class="imagen-borde"></div>
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 6.jpeg" alt="Ejemplo 3" class="imagen-borde"></div>
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 9.jpeg" alt="Ejemplo 3" class="imagen-borde"></div>
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 11.jpeg" alt="Gabinete Psicopedagógico AME" class="imagen-borde"></div>
+        <div class="imagen"><img src="/IMAGENES/Fotos/Juegos 10.jpeg" alt="Ejemplo 3" class="imagen-borde"></div>
+    </div>
+
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    (function () {
+        let currentIndex = 0;
+    
+        function moveSlide(direction) {
+            const carrusel = document.getElementById("carrusel");
+            const imagenes = carrusel.querySelectorAll(".imagen");
+            const itemWidth = imagenes[0].offsetWidth;
+            const visibleItems = Math.floor(carrusel.parentElement.offsetWidth / itemWidth);
+            const totalItems = imagenes.length;
+            const maxIndex = totalItems - visibleItems;
+    
+            currentIndex += direction;
+    
+            if (currentIndex > maxIndex) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = maxIndex;
+    
+            const offset = currentIndex * itemWidth;
+            carrusel.style.transform = `translateX(-${offset}px)`;
+        }
+    
+        window.moveSlide = moveSlide;
+    
+        window.addEventListener('resize', () => moveSlide(0));
+    })();
+    </script>
+
+    <div class="que-ofrecemos">
+        <h1>¿Qué ofrecemos?</h1>
+    </div>
+
+    <div class="servicios-pedagogicos">
+        <a href="servicios.html"><img src="/IMAGENES/Tienda/Atención Psicológica y Logopédica.jpg" alt="Servicios Pedagógicos"></a>
+        <a href="servicios.html"><img src="/IMAGENES/Tienda/Atención Temprana.png" alt="Servicios Pedagógicos"></a>
+        <a href="servicios.html"><img src="/IMAGENES/Tienda/Graduado Escolar.png" alt="Servicios Pedagógicos"></a>
+        <a href="servicios.html"><img src="/IMAGENES/Tienda/Pruebas Acceso FP.png" alt="Servicios Pedagógicos"></a>
+    </div>
+
+    <div class="mucho-mas">
+        <h2>¡Y mucho más!</h2>
+        <p id="descubre_servicios">
+            <span id="descubre_antes">Descubre todos nuestros servicios</span>
+            <a href="servicios.html" id="descubre_link">dando clic aquí</a>.
+        </p>
+    </div>
+
+    <div class="seccion-psicopedagogia">
+        <h1>¿Sabes lo qué es la psicopedagogía?</h1>
+        <h2>
+            La psicopedagogía trata de ver cómo aprendemos y nos desarrollamos a lo largo de toda nuestra vida...
+        </h2>
+    </div>
+
+    <div class="seccion-psicopedagogia2">
+        <h1>¿Sabes cuál es la diferencia entre un psicopedagogo y un psicólogo?</h1>
+        <h2>
+            Un <strong>psicólogo</strong> se centra en el estudio de la mente...
+        </h2>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#hamburger-menu').click(function () {
+                $('#nav-links').toggleClass('active');
+            });
+        });
+    </script>
+
+    <div class="que-ofrecemos">
+        <h1 id="opiniones-titulo">Conoce lo que opinan sobre nosotros</h1>
+    </div>
+  
+      
+    <div id="reseñas">
+        <div class="elfsight-app-64ce6d9d-8f56-4ee2-acff-91c889ecb87d" data-elfsight-app-lazy></div>
+    </div>
+    
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>    
+      
+</body>
+</html>

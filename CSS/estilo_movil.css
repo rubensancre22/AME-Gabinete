@@ -1,0 +1,1080 @@
+@media (max-width: 699px) {
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    body {
+        background-color: #a31c5b;
+        margin: 0;
+        font-family: 'Jersey 20', sans-serif;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    body::before, body::after {
+        display: none;
+    }
+
+    /* Estilos de la barra de navegación */
+    .barra-navegacion {
+        width: 100%;
+        padding: 0px 0;
+        background-color: #f5f6f6;
+        border: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra-navegacion .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Estilo de los enlaces de navegación */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;  /* Mover el menú al lado derecho */
+        width: 100%;
+        background-color: #f5f6f6;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        color: #a31c5b;
+        text-decoration: none;
+        margin: 10px 0;         /* Espacio entre los enlaces */
+    }
+
+    .nav-links a:hover {
+        background-color: #ddd;
+    }
+
+    /* Los enlaces de navegación se muestran cuando el menú está activo */
+    .nav-links.active {
+        display: block;
+        visibility: visible;
+        transform: translateY(0); /* Aparece desde arriba */
+        font-family: 'Delius', sans-serif; /* Fuente Delius */
+    }
+
+    .hamburger-menu i {
+        color: #a31c5b;
+    }
+
+    /* Estilos del menú hamburguesa */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #a31c5b;
+    padding: 10px;
+    z-index: 1001;
+    background-color: transparent; /* Fondo transparente */
+    transform: translateX(-70%); /* Mueve el icono un 10% a la izquierda */
+}
+
+
+    /* Estilo para ocultar el hamburger cuando el menú está activo */
+    .hamburger-menu.active {
+        display: none;
+    }
+
+    /* Menú desplegable */
+    .barra-navegacion ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #b10053;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .barra-navegacion ul li:hover > ul {
+        display: block;
+    }
+
+    .barra-navegacion ul li ul li {
+        width: 140px;
+    }
+
+    .barra-navegacion ul li ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+        display: block;
+    }
+
+    .Bienvenido {
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 40px;
+        color: #a31c5b;
+        background-color: white;
+        font-size: 20px;
+        font-family: "Delius", serif;
+        border-radius: 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .welcome-message-container {
+        width: 100%;
+        padding-top: 120px;
+    }
+
+    .welcome-message-wrapper {
+        max-width: 100%;   /* O el ancho que prefieras */
+        box-sizing: border-box;
+    }
+
+    .welcome-message {
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+        padding: 20px;
+        color: #a31c5b;
+        background-color: white;
+        font-size: 30px;
+        font-family: "Delius", serif;
+        border-radius: 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #psicologa {
+        font-size: 20px;
+        background-color: #c36f96;
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: 'Delius';
+        color: #ffffff;
+        margin-left: 20px;
+        width: 300px;
+        }
+        
+        #psicologa span {
+        font-weight: bold;
+        color: #ff6f61;
+        background-color: #fff3cd;
+        padding: 0.2rem 0.4rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        }
+        
+        #psicologa span:hover {
+        background-color: #ffe8a1;
+        transform: scale(1.05);
+    }
+
+    /* Contenido principal */
+    .Posicion-imagen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .Posicion-imagen .Texto {
+        color: white;
+        text-align: justify;
+        width: 100%;
+        max-width: 520px;
+        font-family: "Chakra Petch", sans-serif;
+        font-size: 20px;
+    }
+
+    .Posicion-imagen .Texto-centro {
+        text-align: center;
+        font-family: "Delius", serif;
+
+    }
+
+    .imagen1 img {
+        max-width: 280px;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    /* Contacto */
+    .contacto {
+        background-color: white;
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 12px;
+        text-align: center;
+        font-family: "Chakra Petch", sans-serif;
+        color: black;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .contacto h2 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .contacto p {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+
+    /* Sección de productos */
+    .tienda {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 25px auto;
+        max-width: 600px;
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        background-color: var(--color-fondo);
+        border-radius: 8px;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 5px solid var(--color-cuarto);
+    }
+
+    .producto:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    .producto .precio {
+        font-size: 12px;
+        color: red;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+
+    .producto button {
+        background-color: var(--color-quinto);
+        color: white;
+        border: none;
+        padding: 8px;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .producto button:hover {
+        background-color: var(--color-cuarto);
+    }
+
+    /* Icono de navegación */
+    .icon-nav a img {
+        width: 28px;
+        height: auto;
+        right: 8px;
+    }
+
+    .llamar-icon,
+    .whatsapp-icon {
+        position: fixed;
+        background-color: #25D366;
+        border-radius: 50%;
+        padding: 5px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    
+    .llamar-icon {
+        bottom: 100px;
+        left: 20px;
+    }
+    
+    .whatsapp-icon {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .whatsapp-icon-img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    
+
+    /* Estilo para el selector de idiomas */
+    .idioma-selector {
+        position: fixed;
+        top: 820px;
+        right: 40px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 140px; /* Ajustar el ancho del contenedor */
+        background-color: white;
+    }
+
+    .idioma-selector label {
+        display: flex;
+        align-items: center;
+    }
+
+    .idioma-selector .bandera {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
+        cursor: pointer; /* Asegura que la bandera sea clickeable */
+    }
+
+    .idioma-selector select {
+        font-size: 30px;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: white;
+        outline: none;
+    }
+
+    .idioma-selector select:focus {
+        border-color: #a31c5b;
+    }
+
+    /* Hacer el select más pequeño para que no se vea demasiado grande comparado con las banderas */
+    .idioma-selector select {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    /* Estilo para las opciones del selector */
+    .idioma-selector option {
+        font-size: 16px;
+        color: black;
+    }
+
+    /* Estilo para la sección .horario */
+    .horario {
+        background-color: #fff; /* Fondo blanco para contraste */
+        padding: 30px 20px;
+        border-radius: 12px;
+        max-width: 800px;
+        margin: 40px auto; /* Centrado horizontal */
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 80%; /* Ancho del 80% para un mejor diseño responsive */
+        position: relative;
+        top: 100px; /* Ajuste vertical para que no se solape con la barra de navegación */
+    }
+
+    /* Estilo del título dentro de .horario */
+    .horario h1 {
+        color: #a31c5b;
+        font-size: 36px;
+        font-family: 'Sarpanch', serif;
+        margin-bottom: 20px;
+    }
+
+    /* Estilo de los elementos <ul> dentro de .horario */
+    .horario ul {
+        list-style: none; /* Eliminar los puntos de la lista */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Estilo de cada elemento <li> dentro de .horario */
+    .horario ul li {
+        font-size: 20px;
+        color: #333;
+        margin: 10px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    /* Estilo para resaltar los días laborables */
+    .horario ul li strong {
+        color: #a31c5b;
+        font-weight: bold;
+    }
+
+    /* Estilo para el texto del horario */
+    .horario ul li span {
+        font-size: 18px;
+        color: #555;
+    }
+
+    /* Hover en los días de la semana */
+    .horario ul li:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Estilo para el contenedor del botón */
+    .boton-cita {
+        text-align: center; /* Centra el botón */
+        margin-top: 30px; /* Espacio entre el horario y el botón */
+    }
+
+    /* Estilo para el botón */
+    .btn-cita {
+        background-color: #a31c5b; /* Color de fondo */
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none; /* Quita el subrayado */
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-cita:hover {
+        background-color: #c36f96; /* Cambio de color al pasar el ratón */
+    }
+
+        
+    .galeria-flex {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .imagen1 {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px; /* Bordes redondeados para el contenedor */
+    }
+
+    .imagen1 img {
+        max-width: 180px;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 10px; /* Borde redondeado solo para la imagen */
+    }
+
+    .imagen1:hover img {
+        transform: scale(1.1);
+    }
+
+    .imagen img {
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px; /* Bordes redondeados para el contenedor */
+        
+    }
+
+
+    .servicios-pedagogicos {
+    text-align: center;
+    margin: 20px 0; /* Separación arriba y abajo */
+    padding: 10px 0; /* Espacio interno */
+    }
+
+    /* Ajustar el tamaño de la imagen */
+    .servicios-pedagogicos img {
+    width: 80%; /* Ajusta el tamaño al 80% del contenedor */
+    max-width: 180px; /* Asegura que no se haga más grande que 300px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Añade separación debajo de la imagen */
+    margin-left: 50px;
+    border-radius: 30px; /* Bordes redondeados */
+    border: 5px solid #d69613;
+    transform: translateY(20px); /* Las imágenes inician desplazadas hacia abajo */
+    transition: opacity 1s ease, transform 0.5s ease; /* Transición para la opacidad y movimiento */
+    }
+
+    /* Efecto hover para levantar la imagen */
+    .servicios-pedagogicos img:hover {
+    transform: translateY(-10px); /* Al pasar el cursor, se mueve hacia arriba */
+    opacity: 1; /* Hace que la imagen sea visible */
+    }
+
+    /* Añadir separación entre imágenes */
+    .servicios-pedagogicos a {
+    margin-right: 20px; /* Espacio entre las imágenes */
+    }
+
+    /* Estilos para la sección "¡Y mucho más!" */
+    .mucho-mas {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 100%; /* Establece el ancho al 100% del viewport */
+    }
+
+    .mucho-mas h2 {
+    font-size: 30px;
+    font-family: 'Delius', sans-serif;
+    color: #a31c5b;
+    margin-bottom: 10px;
+    }
+
+    .mucho-mas a {
+    color: #a31c5b;
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    transition: color 0.3s; /* Efecto suave en el color */
+    }
+
+    .mucho-mas a:hover {
+    color: #a31c5b;
+    cursor: pointer;
+    }
+
+    .mucho-mas p {
+    font-size: 20px;
+    margin-right: 40px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Delius', sans-serif;
+    }
+
+    /* Estilos para la sección "¿Qué ofrecemos?" */
+    .que-ofrecemos {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo de la sección */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Establece el ancho al 100% del viewport */
+    margin-left: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+    margin-right: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+    }
+
+    .que-ofrecemos h1 {
+    font-size: 30px;
+    color: #b30053; /* Color del texto */
+    font-family: 'Delius', serif;
+    margin: 0;
+    font-family: 'Delius', cursive; /* Aplicar la fuente Delius */
+    }
+
+    #opiniones-titulo {
+        font-size: 30px;  /* Ajusta el tamaño de la letra a 24px */
+        margin-right: 40px;
+    }
+    
+    /* Estilos comunes para las secciones */
+    .seccion-psicopedagogia, .seccion-psicopedagogia2 {
+    text-align: center;
+    margin: 32px auto;
+    padding: 20px;
+    background-color: #c36f96; /* No se cambia */
+    border-radius: 10px;
+    max-width: 300px;
+    }
+
+    .seccion-psicopedagogia h1, .seccion-psicopedagogia2 h1 {
+    color: #5a0c32; /* Burdeos oscuro */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Delius', cursive;
+    }
+
+    .seccion-psicopedagogia h2, .seccion-psicopedagogia2 h2 {
+    color: #ffffff; /* Rosa claro */
+    font-size: 1.2rem; /* Unifica el tamaño */
+    font-weight: normal;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Delius', cursive;
+    }
+
+    /* Título principal */
+    .seccion-quienes-somos-titulo h1 {
+    font-size: 1.8rem;
+    padding: 4px;
+    margin-bottom: 8px;
+    }
+
+    /* Descripción del título */
+    .seccion-quienes-somos-titulo p {
+        font-size: 20px;
+        line-height: 1.8;
+        background-color: #c36f96;
+        padding: 14px;
+        border-radius: 20px;
+        font-family: 'Delius';
+        color: #ffffff;
+    }
+
+    /* Título de detalles */
+    .seccion-quienes-somos-detalles h2 {
+    font-size: 1.8rem;
+    padding: 6px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    }
+
+    /* Lista de detalles */
+    .seccion-quienes-somos-detalles ul {
+        font-size: 20px;
+        line-height: 1.8;
+        background-color: #c36f96;
+        padding: 1.5rem;
+        border-radius: 20px;
+        font-family: 'Delius';
+        color: #ffffff;
+    }
+
+    /* Elementos de la lista de detalles */
+    .seccion-quienes-somos-detalles li {
+    font-size: 1.1rem;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    }
+
+    /* Icono */
+    .seccion-quienes-somos-detalles li::before {
+    top: 1px;
+    }
+    
+    .imagen-quienes-somos {
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px; /* Menor radio para una apariencia más sutil */
+    }
+
+    h1.titulo-instalaciones {
+        background-color: white;
+        max-width: 100%;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+    
+    h1.titulo-instalaciones {
+        background-color: white;
+        max-width: 100%;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+
+    .titulo2-instalaciones {
+        background-color: white;
+        width: 100%;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 2.5rem; /* Cambié el tamaño de la fuente */
+    } 
+
+    .instalaciones {
+        display: flex;
+        justify-content: space-between; /* Distribuye los bloques uniformemente */
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+        max-width: 700px; /* Ajusta el ancho máximo del contenedor */
+        margin: 30px auto;
+        padding: 0 20px;
+        gap: 10px; /* Reduce el espacio entre los bloques */
+    }
+    .instalacion-bloque {
+        max-width: 100%; /* Asegura que los bloques no se excedan del ancho */
+        text-align: center;
+    }
+
+    .instalacion-juegos,
+    .instalacion-aulas,
+    .instalacion-consultas {
+        font-size: 1rem; /* Reducido para adaptarse a pantallas pequeñas */
+        padding: 10px 15px; /* Menos relleno */
+    }
+
+    .galeria-instalaciones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 20px;
+    }
+
+    .galeria-instalaciones__img--1,
+    .galeria-instalaciones__img--2,
+    .galeria-instalaciones__img--3 {
+        height: 200px; /* Menor altura */
+        margin-left: 0; /* Eliminar márgenes innecesarios */
+        margin-right: 0; /* Eliminar márgenes innecesarios */
+    }
+
+    .galeria-instalaciones__item--4 {
+        grid-column: span 2; /* Ocupa toda la fila */
+        display: flex;
+        justify-content: center;
+    }
+
+    .galeria-instalaciones__img--4 {
+        width: 100%; /* Usar el 100% de ancho */
+        height: 200px; /* Ajuste la altura */
+    }
+
+    .galeria-instalaciones__img--6 {
+        height: 200px;
+        width: 100%; /* Usar el 100% de ancho */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .galeria-instalaciones__img:hover {
+        transform: scale(1.05); /* Menos zoom en pantallas pequeñas */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombras más suaves */
+    }
+
+    /* Asegurarse de que las imágenes no se excedan del ancho disponible */
+    .galeria-instalaciones__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .Bienvenido {
+        text-align: center;
+        background-color: #ffffff; /* Fondo de la sección */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Establece el ancho al 100% del viewport */
+        margin-left: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+        margin-right: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+        font-size: 20px;
+
+      }
+      
+      .Bienvenido h1 {
+        font-size: 38px;
+        color: #b30053; /* Color del texto */
+        font-family: 'Delius', cursive; /* Aplicar la fuente Delius */
+        margin: 0;
+      }
+     
+      .horario {
+        background: white;
+        border-radius: 0;
+        width: 100%; /* Ocupa todo el ancho */
+        margin-top: 100px;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        top: 80px;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 200px;
+    }
+        
+    .horario:hover {
+        box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada en hover */
+    }
+    
+    /* Estilo del título dentro de .horario */
+    #horario{
+        color: #a31c5b;
+        font-size: 6px;
+        font-family: 'Delius', serif;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Estilo de los elementos <ul> dentro de .horario */
+    .horario ul {
+        list-style: none; /* Eliminar los puntos de la lista */
+        font-family: 'Delius', serif;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+        text-align: left; /* Alineación de texto a la izquierda */
+    }
+    
+    /* Estilo de cada elemento <li> dentro de .horario */
+    .horario ul li {
+        font-size:23px; /* Tamaño de texto más pequeño y legible */
+        color: #333;
+        position: relative;
+        transition: background-color 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+    }
+    
+    /* Estilo para resaltar los días laborables */
+    .horario ul li strong {
+        color: #a31c5b;
+        font-weight: bold;
+        text-transform: capitalize; /* Capitaliza solo las primeras letras */
+    }
+    
+    .horario ul li span {
+        font-size: 28px; /* Tamaño de texto más pequeño y legible */
+        color: #000000;
+        font-weight: bold; /* Establece el texto en negrita */
+    }
+    
+    /* Hover en los días de la semana */
+    .horario ul li:hover {
+        background-color: #ffe6f1; /* Fondo sutilmente rosado en hover */
+        transform: translateX(10px); /* Desplazamiento al pasar el ratón */
+        padding-left: 35px; /* Aumenta el padding al hacer hover para un efecto de profundidad */
+    }
+
+    .Arantxa {
+        width: 100%;
+        max-width: 250px; /* Puedes cambiar este valor según el diseño */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        border-radius: 12px; /* Esquinas redondeadas, opcional */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave, opcional */
+    } 
+
+    .telefono {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        background-color: #ffffff;
+        width: 100%; /* Ocupa todo el ancho */
+        margin: 40px 0 0 0; /* Margen superior, sin márgenes laterales */
+        box-sizing: border-box;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+        position: relative;
+
+    }
+    
+    
+    .telefono > div {
+        text-align: center;
+        max-width: 300px;
+        margin: 0px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #a31c5b;
+    }
+    
+    .telefono > div:hover {
+        transform: translateY(-10px);
+    }
+    
+    .telefono h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .telefono a {
+        color: #a31c5b;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Delius';
+    }
+    
+    .telefono a:hover {
+        color: #f871b0;
+    }
+
+    #horario-titulo{
+        font-family: 'Delius';
+        font-size: 35px;
+    }
+
+    .contacto-imagen img {
+        max-width: 100%;
+        width: 600px; /* O ajusta a 300px, 250px según lo que necesites */
+        height: 400px;
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        border-radius: 10px; /* Opcional: bordes redondeados suaves */
+    }
+    
+    .formulario-contacto {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        width: 90%;         /* Ocupar todo el ancho */
+        max-width: none;     /* Eliminar límite */
+        box-sizing: border-box; /* Evita que el padding lo desborde */
+        font-family: 'Delius';
+    }
+    
+    
+    .formulario-contacto form {
+        width: 100%;
+        max-width: 700px; /* Aumentado respecto a los típicos 500px */
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+    
+    .imagen-quienes-somos {
+        max-width: 100%;
+        width: 400px; /* Puedes ajustar este valor según lo pequeño que lo quieras */
+        height: 550px;
+        display: block;
+        margin: 0 auto; /* Centrado horizontal si está dentro de un contenedor más grande */
+    }
+    
+    h1.titulo-instalaciones {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff; /* Fondo de la sección */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Establece el ancho al 100% del viewport */
+        margin-left: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+        margin-right: calc(-50% + 50%); /* Ajusta la posición para que ocupe todo el ancho */
+    }
+    
+    .galeria-instalaciones {
+        display: grid;
+        grid-template-columns: repeat(3, 170px);
+        gap: 40px;
+        justify-content: center;
+    }
+      
+    .galeria-instalaciones__img {
+        height: 300px;
+        border-radius: 20px;
+        object-fit: cover;
+        opacity: 1;
+        transform: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+      
+    .galeria-instalaciones__img:hover {
+        transform: scale(1.55);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        z-index: 10; /* Asegura que quede por encima */
+    }
+      
+    .galeria-instalaciones__img.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }  
+    
+    .galeria-instalaciones {
+        display: grid;
+        justify-items: center;
+    }
+      
+    .galeria-instalaciones__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+      
+      /* Para las demás imágenes, asignamos alturas aleatorias */
+    .galeria-instalaciones__item {
+        position: relative;
+    }
+      
+    .galeria-instalaciones__img--1 {
+        height: 300px;
+        margin-left: -20px;
+    }
+      
+    .galeria-instalaciones__img--2 {
+        height: 300px;
+        margin-left: 0px;
+    }
+      
+    .galeria-instalaciones__img--3 {
+        height: 300px;
+        margin-left: 10px;
+        
+    }
+      
+    /* Foto 4, forzada a ser horizontal */
+    .galeria-instalaciones__img--4 {
+        height: 300px;
+        width: 400px;
+        margin-left: 190px;
+        margin-top: 40px;
+    }
+          
+    .galeria-instalaciones__img--6 {
+        height: 300px;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+      
+    .galeria-instalaciones__img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+      
+    .instalaciones {
+        display: flex; /* Alinea los bloques en una fila */
+        justify-content: center; /* Espacio entre los bloques */
+        gap: 20px; /* Espacio entre los bloques */
+        max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding: 0 20px;
+    }
+    
+    .instalacion-bloque {
+        flex: 1; /* Hace que los bloques ocupen espacio de manera equitativa */
+        max-width: 250px; /* Limita el ancho máximo de cada bloque */
+        display: flex;
+        flex-direction: column; /* Mantiene la estructura en columna dentro de cada bloque */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .instalacion-juegos,
+    .instalacion-aulas,
+    .instalacion-consultas {
+        font-family: 'Delius', cursive;
+        font-size: 20px;
+        color: #333;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+    
+}

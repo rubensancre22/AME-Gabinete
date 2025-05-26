@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/IMAGENES/Icono AME Gabinete.jpg" type="image/jpg" />
+  <title>AME Gabinete | Instalaciones</title>
+  
+  <link rel="stylesheet" href="/CSS/estilo.css" />
+  <link rel="stylesheet" href="/CSS/estilo_tablet.css" />
+  <link rel="stylesheet" href="/CSS/estilo_movil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+  
+  <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <nav class="barra-navegacion">
+    <div class="nav-container">
+      <img src="/IMAGENES/Logo AME 2021(1).png" alt="Logo AME Gabinete" class="logo-barra" draggable="false" />
+      
+      <div class="hamburger-menu" id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" id="inicio">Inicio</a></li>
+        <li><a href="servicios.html" id="servicios">Servicios</a></li>
+        <li><a href="quienessomos.html" id="quienes_somos">Quiénes Somos</a></li>
+        <li><a href="Instalaciones.html" id="instalaciones">Instalaciones</a></li>
+        <li><a href="contacto.html" id="contacto">Contáctanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1 class="titulo-instalaciones" id="titulo-instalaciones">Nuestras instalaciones disponen de:</h1>
+
+  <div class="instalaciones">
+    <div class="instalacion-bloque">
+      <span class="instalacion-juegos" id="texto-juegos">Sala de juegos <br> 🎯</span>
+    </div>
+    <div class="instalacion-bloque">
+      <span class="instalacion-aulas" id="texto-aulas">Aulas amplias <br> 📚</span>
+    </div>
+    <div class="instalacion-bloque">
+      <span class="instalacion-consultas" id="texto-consultas">Consultas <br> 👩🏼‍🏫</span>
+    </div>
+  </div>
+
+  <a href="https://wa.me/34610447906" class="whatsapp-icon" target="_blank">
+    <img src="/IMAGENES/whatsapp logo.png" alt="" class="whatsapp-icon-img">
+  </a>
+
+  <a href="tel:+34610447906" class="llamar-icon" target="_blank">
+    <img src="/IMAGENES/phone.png" alt="" class="whatsapp-icon-img">
+  </a>
+
+  <section class="galeria-instalaciones">
+    <div class="galeria-instalaciones__item">
+      <img class="galeria-instalaciones__img galeria-instalaciones__img--1" src="/IMAGENES/Instalaciones/Instalaciones 6.jpeg" alt="Foto 1 de instalaciones" />
+    </div>
+    <div class="galeria-instalaciones__item">
+      <img class="galeria-instalaciones__img galeria-instalaciones__img--2" src="/IMAGENES/Instalaciones/Instalaciones 2.jpeg" alt="Foto 2 de instalaciones" />
+    </div>
+    <div class="galeria-instalaciones__item">
+      <img class="galeria-instalaciones__img galeria-instalaciones__img--3" src="/IMAGENES/Instalaciones/Instalaciones 3.jpeg" alt="Foto 3 de instalaciones" />
+    </div>
+  </section>
+
+  <section class="galeria-instalaciones">
+    <div class="galeria-instalaciones__item">
+      <img class="galeria-instalaciones__img galeria-instalaciones__img--4" src="/IMAGENES/Instalaciones/Instalaciones 4.jpeg" alt="Foto 4 de instalaciones" />
+    </div>
+    <div class="galeria-instalaciones__item"></div>
+    <div class="galeria-instalaciones__item">
+      <img class="galeria-instalaciones__img galeria-instalaciones__img--6" src="/IMAGENES/Instalaciones/Instalaciones 5.jpeg" alt="Foto 6 de instalaciones" />
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fotos = document.querySelectorAll(".foto");
+      let index = 0;
+
+      function mostrarSiguienteFoto() {
+        if (index < fotos.length) {
+          fotos[index].classList.add("mostrar");
+          index++;
+          setTimeout(mostrarSiguienteFoto, 1500);
+        }
+      }
+
+      mostrarSiguienteFoto();
+    });
+  </script>
+
+  <script>
+    function cambiarIdioma() {
+      var idioma = localStorage.getItem('idioma') || 'es';
+
+      var textos = {
+        'es': {
+          'inicio': 'Inicio',
+          'servicios': 'Servicios',
+          'quienes_somos': 'Quiénes Somos',
+          'instalaciones': 'Instalaciones',
+          'contacto': 'Contáctanos',
+          'tituloInstalaciones': 'Nuestras instalaciones disponen de:',
+          'juegos': 'Sala de juegos <br> 🎯',
+          'aulas': 'Aulas amplias <br> 📚',
+          'consultas': 'Consultas <br> 👩🏼‍🏫'
+        },
+        'ca': {
+        'inicio': 'Inici',
+        'servicios': 'Servicis',
+        'quienes_somos': 'Qui som',
+        'instalaciones': 'Instal·lacions',
+        'contacto': 'Contacta\'ns',
+        'tituloInstalaciones': 'Les nostres instal·lacions disposen de:',
+        'juegos': 'Sala de jocs <br> 🎯',
+        'aulas': 'Aules espaioses <br> 📚',
+        'consultas': 'Consultes <br> 👩🏼‍🏫'
+        },
+        'en': {
+          'inicio': 'Home',
+          'servicios': 'Services',
+          'quienes_somos': 'Who we are',
+          'instalaciones': 'Facilities',
+          'contacto': 'Contact Us',
+          'tituloInstalaciones': 'Our facilities include:',
+          'juegos': 'Playroom <br> 🎯',
+          'aulas': 'Spacious classrooms <br> 📚',
+          'consultas': 'Consulting rooms <br> 👩🏼‍🏫'
+        }
+      };
+
+      document.getElementById('inicio').innerText = textos[idioma]['inicio'];
+      document.getElementById('servicios').innerText = textos[idioma]['servicios'];
+      document.getElementById('quienes_somos').innerText = textos[idioma]['quienes_somos'];
+      document.getElementById('instalaciones').innerText = textos[idioma]['instalaciones'];
+      document.getElementById('contacto').innerText = textos[idioma]['contacto'];
+      document.getElementById('titulo-instalaciones').innerText = textos[idioma]['tituloInstalaciones'];
+      document.getElementById('texto-juegos').innerHTML = textos[idioma]['juegos'];
+      document.getElementById('texto-aulas').innerHTML = textos[idioma]['aulas'];
+      document.getElementById('texto-consultas').innerHTML = textos[idioma]['consultas'];
+    }
+
+    window.onload = cambiarIdioma;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuHamburguesa = document.getElementById("hamburger-menu");
+      const navLinks = document.getElementById("nav-links");
+
+      menuHamburguesa.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

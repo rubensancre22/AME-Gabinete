@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AME Gabinete - Apoyo psicopedagógico especializado en niños y adolescentes" />
+  <link rel="icon" href="/IMAGENES/Icono AME Gabinete.jpg" type="image/jpg" />
+  <title>AME Gabinete | ¿Quiénes somos?</title>
+  <link rel="stylesheet" href="/CSS/estilo.css" />
+  <link rel="stylesheet" href="/CSS/estilo_tablet.css" />
+  <link rel="stylesheet" href="/CSS/estilo_movil.css" />
+  <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="barra-navegacion">
+    <div class="nav-container">
+      <img src="/IMAGENES/Logo AME 2021(1).png" alt="Logo AME Gabinete" class="logo-barra" draggable="false" />
+
+      <div class="hamburger-menu" id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" data-translate="nav_home">Inicio</a></li>
+        <li><a href="servicios.html" data-translate="nav_services">Servicios</a></li>
+        <li><a href="quienessomos.html" data-translate="nav_about">Quiénes Somos</a></li>
+        <li><a href="Instalaciones.html" data-translate="nav_facilities">Instalaciones</a></li>
+        <li><a href="contacto.html" data-translate="nav_contact">Contáctanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1 class="titulo-instalaciones2" data-translate="about_title">¿Quiénes somos?</h1>
+
+  <img src="/IMAGENES/Fotos/Arantxa Montaner Enri.jpeg" alt="Equipo de AME Gabinete" class="imagen-quienes-somos" />
+
+  <main>
+    <nav class="contenido-quienes-somos">
+      <section class="seccion-quienes-somos">
+        <div class="nav-quienes-somos">
+          <div class="seccion-quienes-somos-titulo">
+            <p data-translate="about_intro">
+              En AME Gabinete somos un gran equipo de profesionales y docentes dedicados a dar una atención integral y coordinada en el ámbito de la salud mental para las familias y los niños/as. Nuestro enfoque se basa en aprender jugando, realizando actividades, talleres y excursiones. Queremos ser un apoyo significativo para quienes confían en nosotros.
+            </p>
+          </div>
+        </div>
+      </section>
+    </nav>
+  </main>
+
+  <h1 class="titulo-instalaciones" data-translate="about_services_title">En AME Gabinete realizamos:</h1>
+
+  <main>
+    <nav>
+      <section>
+        <div class="nav-objetivos">
+          <div class="seccion-quienes-somos-detalles">
+            <ul>
+              <li data-translate="about_item1"><strong>Atención Pedagógica:</strong> Nos dedicamos en ayudar a los niños a superar las dificultades educativas que puedan tener, dando un apoyo personalizado para que puedan desarrollar todo el potencial que tienen.</li>
+              <li data-translate="about_item2"><strong>Atención Psicológica y Logopédica:</strong> Te ayudaremos con un gran apoyo profesional para mejorar tu bienestar emocional y desarrollar tus habilidades comunicativas y superar cualquier reto.</li>
+              <li data-translate="about_item3"><strong>Atención Temprana:</strong> También apoyamos el desarrollo temprano de los niños, trabajando sus habilidades cognitivas, sociales y emocionales.</li>
+              <li data-translate="about_item4"><strong>Trabajo en equipo:</strong> Nosotros nos coordinamos como equipo para dar la mejor atención coherente y efectiva para cada persona. Nuestro gabinete está formado por profesionales y docentes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </nav>
+  </main>
+
+  <a href="https://wa.me/34610447906" class="whatsapp-icon" target="_blank">
+    <img src="/IMAGENES/whatsapp logo.png" alt="" class="whatsapp-icon-img">
+  </a>
+
+  <a href="tel:+34610447906" class="llamar-icon" target="_blank">
+    <img src="/IMAGENES/phone.png" alt="" class="whatsapp-icon-img">
+  </a>
+
+  <script>
+    $(document).ready(function () {
+      $('#hamburger-menu').click(function () {
+        $('#nav-links').toggleClass('active');
+      });
+    });
+
+    const traducciones = {
+      es: {
+        nav_home: "Inicio",
+        nav_services: "Servicios",
+        nav_about: "Quiénes Somos",
+        nav_facilities: "Instalaciones",
+        nav_contact: "Contáctanos",
+        about_title: "¿Quiénes somos?",
+        about_intro: "En AME Gabinete somos un gran equipo de profesionales y docentes dedicados a dar una atención integral y coordinada en el ámbito de la salud mental para las familias y los niños/as. Nuestro enfoque se basa en aprender jugando, realizando actividades, talleres y excursiones. Queremos ser un apoyo significativo para quienes confían en nosotros.",
+        about_services_title: "En AME Gabinete realizamos:",
+        about_item1: "<strong>Atención Pedagógica:</strong> Nos dedicamos en ayudar a los niños a superar las dificultades educativas que puedan tener, dando un apoyo personalizado para que puedan desarrollar todo el potencial que tienen.",
+        about_item2: "<strong>Atención Psicológica y Logopédica:</strong> Te ayudaremos con un gran apoyo profesional para mejorar tu bienestar emocional y desarrollar tus habilidades comunicativas y superar cualquier reto.",
+        about_item3: "<strong>Atención Temprana:</strong> También apoyamos el desarrollo temprano de los niños, trabajando sus habilidades cognitivas, sociales y emocionales.",
+        about_item4: "<strong>Trabajo en equipo:</strong> Nosotros nos coordinamos como equipo para dar la mejor atención coherente y efectiva para cada persona. Nuestro gabinete está formado por profesionales y docentes."
+      },
+      en: {
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_about: "Who we are",
+        nav_facilities: "Facilities",
+        nav_contact: "Contact Us",
+        about_title: "About Us",
+        about_intro: "At AME Center, we are a team of professionals and educators dedicated to providing comprehensive and coordinated mental health care for families and children. Our approach is based on learning through play, with activities, workshops, and excursions. We strive to be a meaningful support for those who trust us.",
+        about_services_title: "At AME Center, we offer:",
+        about_item1: "<strong>Educational Support:</strong> We help children overcome learning difficulties through personalized support so they can reach their full potential.",
+        about_item2: "<strong>Psychological and Speech Therapy:</strong> We offer strong professional support to improve emotional well-being, develop communication skills, and overcome challenges.",
+        about_item3: "<strong>Early Childhood Intervention:</strong> We also support the early development of children, working on their cognitive, social, and emotional skills.",
+        about_item4: "<strong>Teamwork:</strong> Our team coordinates to provide the most coherent and effective care for each person. Our center is made up of professionals and educators."
+      },
+      ca: {
+        nav_home: "Inici",
+        nav_services: "Servicis",
+        nav_about: "Qui som",
+        nav_facilities: "Instal·lacions",
+        nav_contact: "Contacta'ns",
+        about_title: "Qui som?",
+        about_intro: "A AME Gabinete som un gran equip de professionals i docents dedicats a oferir una atenció integral i coordinada en l'àmbit de la salut mental per a les famílies i els xiquets i xiquetes. El nostre enfocament es basa a aprendre jugant, fent activitats, tallers i excursions. Volem ser un suport significatiu per a qui confia en nosaltres.",
+        about_services_title: "A AME Gabinete oferim:",
+        about_item1: "<strong>Atenció pedagògica:</strong> Ens dediquem a ajudar els xiquets i xiquetes a superar dificultats educatives, oferint un suport personalitzat perquè desenvolupen tot el seu potencial.",
+        about_item2: "<strong>Atenció psicològica i logopèdica:</strong> T’ajudem amb un gran suport professional per a millorar el teu benestar emocional, desenvolupar les teues habilitats comunicatives i superar qualsevol repte.",
+        about_item3: "<strong>Atenció primerenca:</strong> També donem suport al desenvolupament primerenc dels xiquets i xiquetes, treballant les seues habilitats cognitives, socials i emocionals.",
+        about_item4: "<strong>Treball en equip:</strong> Ens coordinem com a equip per a oferir una atenció coherent i eficaç a cada persona. El nostre gabinet està format per professionals i docents."
+      }
+    };
+
+    const idioma = localStorage.getItem("idioma") || "es";
+    document.querySelectorAll("[data-translate]").forEach((el) => {
+      const key = el.getAttribute("data-translate");
+      if (traducciones[idioma][key]) {
+        el.innerHTML = traducciones[idioma][key];
+      }
+    });
+  </script>
+</body>
+</html>

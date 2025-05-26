@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../IMAGENES/Icono AME Gabinete.jpg" type="image/jpg">
+    <title>AME Gabinete - Carrito</title>
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <link rel="stylesheet" href="/CSS/carrito_tablet.css">
+    <link rel="stylesheet" href="/CSS/carrito_movil.css">
+    <link rel="stylesheet" href="/CSS/carrito.css">
+    <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">      
+</head>
+<body>
+    <div class="contenedor-carrito">
+        <div class="Bienvenido">
+            <h2><i class="fa-solid fa-cart-shopping"></i> <span id="titulo-carrito">Carrito:</span></h2>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <button id="back-to-shop" onclick="window.location.href='servicios.html'">Volver a la tienda</button>
+
+        <nav>
+            <ul>
+                <li><a href="#"><span id="label-total">Total:</span> <span id="total-services">0 servicios</span></a></li>
+                <li id="solicitar-pedido-container" style="display: none;">
+                    <button class="solicitar-pedido" onclick="solicitarPedido()" id="boton-enviar">Enviar correo</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function solicitarPedido() {
+            const idioma = localStorage.getItem('idioma') || 'es';
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+            if (Object.keys(carrito).length === 0) return;
+
+            let orderDetails = idioma === 'en'
+                ? "Hello, I would like to request information about the following services:\n\n"
+                : "Hola, me gustaría solicitar información sobre los siguientes servicios:\n\n";
+
+            Object.keys(carrito).forEach(productName => {
+                orderDetails += `- ${productName}\n`;
+            });
+
+            const totalText = idioma === 'en'
+                ? `\nTotal: ${Object.keys(carrito).length} services`
+                : `\nTotal: ${Object.keys(carrito).length} servicios`;
+
+            orderDetails += totalText;
+
+            const mailtoLink = `mailto:Amegabinete@gmail.com?subject=Solicitud de Información&body=${encodeURIComponent(orderDetails)}`;
+            window.location.href = mailtoLink;
+        }
+
+        function displayCart() {
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+            const cartItemsElement = document.getElementById('cart-items');
+            const totalServicesElement = document.getElementById('total-services');
+            const solicitarPedidoContainer = document.getElementById('solicitar-pedido-container');
+
+            cartItemsElement.innerHTML = "";
+            let totalServices = 0;
+
+            Object.keys(carrito).forEach(productName => {
+                totalServices++;
+                cartItemsElement.innerHTML += `
+                    <div class="cart-item">
+                        <span>${productName}</span>
+                        <button class="remove-item" data-name="${productName}">X</button>
+                    </div>
+                `;
+            });
+
+            const idioma = localStorage.getItem('idioma') || 'es';
+            totalServicesElement.textContent = idioma === 'en'
+                ? `${totalServices} services`
+                : `${totalServices} servicios`;
+
+            solicitarPedidoContainer.style.display = totalServices > 0 ? 'inline-block' : 'none';
+        }
+
+        function traducirCarrito() {
+            const idioma = localStorage.getItem('idioma') || 'es';
+
+            const traducciones = {
+                es: {
+                    titulo: "Carrito:",
+                    volver: "Volver a la tienda",
+                    total: "Total:",
+                    enviar: "Enviar correo"
+                },
+                en: {
+                    titulo: "Cart:",
+                    volver: "Back to shop",
+                    total: "Total:",
+                    enviar: "Send email"
+                }
+            };
+
+            const t = traducciones[idioma];
+            document.getElementById('titulo-carrito').textContent = t.titulo;
+            document.getElementById('back-to-shop').textContent = t.volver;
+            document.getElementById('label-total').textContent = t.total;
+            document.getElementById('boton-enviar').textContent = t.enviar;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            traducirCarrito();
+            displayCart();
+
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('remove-item')) {
+                    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+                    const productName = e.target.getAttribute('data-name');
+                    delete carrito[productName];
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    displayCart();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

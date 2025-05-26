@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/IMAGENES/Icono AME Gabinete.jpg" type="image/jpg">
+    <title>AME Gabinete | Contacto</title>
+
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <link rel="stylesheet" href="/CSS/estilo_tablet.css">
+    <link rel="stylesheet" href="/CSS/estilo_movil.css">
+
+    <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="barra-navegacion">
+        <div class="nav-container">
+        <img src="/IMAGENES/Logo AME 2021(1).png" alt="Logo AME Gabinete" class="logo-barra logo-imagen" draggable="false"
+>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html" id="inicio">Inicio</a></li>
+                <li><a href="servicios.html" id="servicios">Servicios</a></li>
+                <li><a href="quienessomos.html" id="quienes_somos">Quiénes Somos</a></li>
+                <li><a href="Instalaciones.html" id="instalaciones">Instalaciones</a></li>                
+                <li><a href="contacto.html" id="contacto">Contáctanos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="horario">
+        <h1 id="horario-titulo">Nuestro horario es:</h1>
+        <ul>
+            <li><strong id="horario-lunes-viernes">Lunes a Viernes:</strong> <span id="horario-horas">9:00 a 20:00</span></li>
+            <li>
+                <strong id="horario-fin-semana">Fin de Semana:</strong>
+                <span id="cerrado">Cerrado</span>
+            </li>              
+        </ul>
+    </div>
+    
+    <section class="formulario-contacto">
+        <form id="formulario-contacto" onsubmit="enviarCorreo(event)">
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+            </div>
+            <div class="form-group">
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí." required maxlength="1000"></textarea>
+                <p id="contador-caracteres">Límite de caracteres: 1000</p>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="respuesta-enviada" style="display:none;">
+            <p>Redirigiendo al Gmail.</p>
+        </div>
+    </section>
+
+    <div class="telefono">
+        <div class="telefono-phone">
+            <h2><i class="fa-brands fa-whatsapp"></i></h2>
+            <a href="https://wa.me/34610447906" class="enlace-telefono" target="_blank">
+                <h3 id="telefono-1">669 15 55 55</h3>
+            </a>
+        </div>
+
+        <div class="telefono-email">
+            <h2><i class="fa-regular fa-envelope"></i></h2>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Amegabinete@gmail.com" class="enlace-email" target="_blank">
+                <h3 id="email">amegabinete@gmail.com</h3>
+            </a>
+        </div>
+
+        <div class="telefono-instagram">
+            <h2><i class="fa-brands fa-instagram"></i></h2>
+            <a href="https://www.instagram.com/amegabinete/?hl=es" class="enlace-instagram" target="_blank">
+                <h3 id="instagram">@amegabinete</h3>
+            </a>
+        </div>
+
+        <div class="telefono-facebook">
+            <h2><i class="fa-brands fa-facebook"></i></h2>
+            <a href="https://www.facebook.com/AMEgabinete" class="enlace-facebook" target="_blank">
+                <h3 id="facebook">AME gabinete</h3>
+            </a>
+        </div>
+
+        <div class="telefono-location">
+            <h2><i class="fa-solid fa-location-dot"></i></h2>
+            <div class="ubicaciones">
+                <a href="https://maps.app.goo.gl/FEyuJ5TqxmZsacgc6" class="enlace-ubicacion" target="_blank">
+                    <h3 id="ubicacion-1">Avda. Alicante 36, Gandia</h3>
+                </a>
+                <a href="https://maps.app.goo.gl/3nCCWG75buf7cCD37" class="enlace-ubicacion" target="_blank">
+                    <h3 id="ubicacion-2">Les Carmelites 13, Gandia</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacto-imagen">
+        <img src="/IMAGENES\TARJETAS 3.jpeg" alt="Imagen del Gabinete AME">
+    </div>
+
+    <a href="https://wa.me/34610447906" class="whatsapp-icon" target="_blank">
+        <img src="/IMAGENES/whatsapp logo.png" alt="Icono de WhatsApp" class="whatsapp-icon-img">
+    </a>
+
+    <a href="tel:+34610447906" class="llamar-icon" target="_blank">
+        <img src="/IMAGENES/phone.png" alt="Icono de teléfono" class="whatsapp-icon-img">
+    </a>
+
+    <script>
+        $(document).ready(function() {
+            $('#hamburger-menu').click(function() {
+                $('#nav-links').toggleClass('active');
+            });
+
+            $('#mensaje').on('input', function() {
+                var caracteresRestantes = 1000 - $(this).val().length;
+                $('#contador-caracteres').text('Límite de caracteres: ' + caracteresRestantes);
+            });
+        });
+
+        window.onload = function() {
+            const idioma = localStorage.getItem("idioma") || "es";
+            cambiarIdioma(idioma);
+        };
+
+        function cambiarIdioma(idioma) {
+            const traducciones = {
+                es: {
+                    "horario-titulo": "Nuestro horario:",
+                    "horario-lunes-viernes": "Lunes a Viernes:",
+                    "horario-horas": "9:00 a 20:00",
+                    "horario-fin-semana": "Fin de Semana:",
+                    "cerrado": "Cerrado",
+                    "telefono-1": "669 15 55 55",
+                    "email": "amegabinete@gmail.com",
+                    "instagram": "@amegabinete",
+                    "facebook": "AME gabinete",
+                    "ubicacion-1": "Avda. Alicante 36, Gandia",
+                    "ubicacion-2": "Les Carmelites 13, Gandia",
+                    "inicio": "Inicio",
+                    "servicios": "Servicios",
+                    "contacto": "Contáctanos",
+                    "nombre": "Tu nombre",
+                    "correo": "Tu correo",
+                    "mensaje": "Escribe tu mensaje aquí...",
+                    "contador-caracteres": "Límite de caracteres: 1000",
+                    "enviar": "Enviar",
+                    'quienes_somos': 'Quiénes Somos',
+                    'instalaciones': 'Instalaciones'
+                },
+                ca: {
+                    "horario-titulo": "El nostre horari:",
+                    "horario-lunes-viernes": "De dilluns a divendres:",
+                    "horario-horas": "9:00 a 20:00",
+                    "horario-fin-semana": "Cap de setmana:",
+                    "cerrado": "Tancat",
+                    "telefono-1": "669 15 55 55",
+                    "email": "amegabinete@gmail.com",
+                    "instagram": "@amegabinete",
+                    "facebook": "AME Gabinet",
+                    "ubicacion-1": "Av. Alacant 36, Gandia",
+                    "ubicacion-2": "C/ Les Carmelites 13, Gandia",
+                    "inicio": "Inici",
+                    "servicios": "Servicis",
+                    "contacto": "Contacta'ns",
+                    "nombre": "El teu nom",
+                    "correo": "El teu correu",
+                    "mensaje": "Escriu el teu missatge ací...",
+                    "contador-caracteres": "Límit de caràcters: 1000",
+                    "enviar": "Enviar",
+                    "instalaciones": "Instal·lacions",
+                    "quienes_somos": "Qui som"
+                },
+                en: {
+                    "horario-titulo": "Our working hours:",
+                    "horario-lunes-viernes": "Monday to Friday:",
+                    "horario-horas": "9:00 to 20:00",
+                    "horario-fin-semana": "Weekend:",
+                    "cerrado": "Closed",
+                    "telefono-1": "669 15 55 55",
+                    "email": "amegabinete@gmail.com",
+                    "instagram": "@amegabinete",
+                    "facebook": "AME gabinete",
+                    "ubicacion-1": "Avda. Alicante 36, Gandia",
+                    "ubicacion-2": "Les Carmelites 13, Gandia",
+                    "inicio": "Home",
+                    "servicios": "Services",
+                    "contacto": "Contact Us",
+                    "nombre": "Your name",
+                    "correo": "Your email",
+                    "mensaje": "Write your message here...",
+                    "contador-caracteres": "Character limit: 1000",
+                    "enviar": "Send",
+                    'quienes_somos': 'Who we are',
+                    'instalaciones': 'Facilities'
+                }
+            };
+
+            const langData = traducciones[idioma];
+            for (const id in langData) {
+                if (document.getElementById(id)) {
+                    const element = document.getElementById(id);
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        if (!element.value) {  // Solo cambia el texto si el campo está vacío
+                            element.placeholder = langData[id];  // Cambia el texto del placeholder
+                        }
+                    } else {
+                        element.textContent = langData[id];  
+                    }
+                }
+            }
+        }
+
+        function enviarCorreo(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            const asunto = 'Formulario de Contacto';
+            const cuerpo = `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje: ${mensaje}`;
+
+            const mailtoLink = `mailto:elrubit40@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+
+            window.location.href = mailtoLink;
+
+            document.getElementById('respuesta-enviada').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

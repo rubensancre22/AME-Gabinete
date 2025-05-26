@@ -1,0 +1,985 @@
+@media (min-width: 700px) and (max-width: 1260px) {
+    body {
+        background-color: #a31c5b;
+        margin: 0;
+        font-family: 'Jersey 20', sans-serif;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Rectángulos laterales fijos y ocupando toda la altura de la página */
+    body::before, body::after {
+        display: none;
+        content: '';
+        position: fixed;
+        width: 100px;
+        height: 100%;
+        background-color: #c36f96;
+        top: 0;
+        z-index: -1;
+    }
+
+    body::before {
+        left: 0;
+    }
+
+    body::after {
+        right: 0;
+    }
+
+    /* Estilos de la barra de navegación */
+    .barra-navegacion {
+        width: 100%; /* Reduce el ancho al 100% */
+        padding: 10px 0;
+        background-color: #f5f6f6;
+        border: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-family: Pompiere;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    /* Contenedor para los enlaces, centrado */
+    .barra-navegacion .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra-navegacion ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra-navegacion ul li {
+        margin: 0 15px;
+    }
+
+    /* Estilo para los enlaces en la barra de navegación */
+    .barra-navegacion ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 28px;
+        padding: 0 15px;
+        position: relative; /* Necesario para colocar el subrayado de manera dinámica */
+        display: inline-block;
+        outline: none; /* Elimina el borde al hacer clic */
+    }
+
+    .barra-navegacion ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: -30%; /* Mueve la línea un 3% hacia abajo */
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #a31c5b; /* Color del subrayado */
+        transition: width 0.3s ease; /* Efecto suave en el subrayado */
+    }
+
+    .barra-navegacion ul li a:hover::after {
+        width: 100%; /* El subrayado se expande cuando pasas el ratón */
+    }
+
+    .barra-navegacion ul li a:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    /* Menú desplegable */
+    .barra-navegacion ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #b10053;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Mostrar el submenú cuando el ratón pase sobre el elemento principal */
+    .barra-navegacion ul li:hover > ul {
+        display: block;
+    }
+
+    .barra-navegacion ul li ul li {
+        width: 140px;
+    }
+
+    .barra-navegacion ul li ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+        display: block;
+    }
+
+    .Bienvenido {
+        text-align: center;
+        margin: 120px 0 20px 0; /* margen solo arriba y abajo */
+        padding: 20px;
+        color: #a31c5b;
+        background-color: white;
+        font-size: 24px;
+        font-family: "Delius", serif;
+        border-radius: 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        width: 100%; /* ocupa todo el ancho */
+        box-sizing: border-box; /* incluye el padding en el ancho total */
+    }
+    
+    
+
+    .Posicion-imagen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .Posicion-imagen .Texto {
+        color: white;
+        text-align: justify;
+        width: 90%;
+        max-width: 100%;
+        font-family: "Chakra Petch", sans-serif;
+        font-size: 20px;
+        margin: 10px auto;
+    }
+
+    .Posicion-imagen .Texto-centro {
+        text-align: center;
+        font-family: "Delius", serif;
+
+    }
+
+    .imagen1 img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .contacto {
+        background-color: white;
+        width: 95%;
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        font-family: "Chakra Petch", sans-serif;
+        color: black;
+    }
+
+    .contacto h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .contacto p {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    /* Sección de productos */
+    .tienda {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los productos se acomoden en varias filas */
+        justify-content: center;
+        gap: 20px; /* Aumenta el espacio entre los productos */
+        margin: 40px auto;
+        max-width: 1200px;
+    }
+
+    /* Estilo de cada producto */
+    .producto {
+        background-color: var(--color-fondo);
+        border-radius: 12px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 200px; /* Ajustado para que se ajusten bien en la tablet */
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 5px solid var(--color-cuarto);
+    }        
+    
+    .producto:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .producto .precio {
+        font-size: 20px; /* Ajustado para que se vea bien en pantallas más pequeñas */
+        color: red;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .producto button {
+        background-color: var(--color-quinto);
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .producto button:hover {
+        background-color: var(--color-cuarto);
+    }
+
+    .llamar-icon {
+        position: fixed;
+        bottom: 100px; /* Aumenta este valor para separar más el icono de teléfono */
+        left: 20px;
+        background-color: #25D366; /* Mismo color que WhatsApp */
+        border-radius: 50%;
+        padding: 5px; /* Ajustado para que sea más pequeño */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 2; /* Asegura que el icono de llamada esté encima de WhatsApp */
+    }
+
+    /* Imagen del icono de teléfono */
+    .phone-icon-img {
+        width: 30px; /* Tamaño ajustado */
+        height: 30px; /* Tamaño ajustado */
+        object-fit: cover;
+    }
+
+    /* Estilo de WhatsApp */
+    .whatsapp-icon {
+        position: fixed;
+        bottom: 20px; /* Mueve el icono de WhatsApp a la parte inferior */
+        left: 20px;
+        background-color: #25D366;
+        border-radius: 50%;
+        padding: 5px; /* Ajustado para que sea más pequeño */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1; /* Asegura que el icono de WhatsApp esté debajo del icono de llamada */
+    }
+
+    /* Imagen del icono de WhatsApp */
+    .whatsapp-icon-img {
+        width: 30px; /* Tamaño ajustado */
+        height: 30px; /* Tamaño ajustado */
+        object-fit: cover;
+    }
+
+    /* Estilo para el selector de idiomas */
+    .idioma-selector {
+        position: fixed;
+        top: 50px; /* Aumenta este valor para bajarlo más */
+        right: 0px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100px; /* Ajustar el ancho del contenedor */
+    }
+
+    .idioma-selector label {
+        display: flex;
+        align-items: center;
+    }
+
+    .idioma-selector .bandera {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+        cursor: pointer; /* Asegura que la bandera sea clickeable */
+    }
+
+    .idioma-selector select {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: white;
+        outline: none;
+    }
+
+    .idioma-selector select:focus {
+        border-color: #a31c5b;
+    }
+
+    /* Hacer el select más pequeño para que no se vea demasiado grande comparado con las banderas */
+    .idioma-selector select {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    /* Estilo para las opciones del selector */
+    .idioma-selector option {
+        font-size: 16px;
+        color: black;
+    }
+
+
+    /* Estilo para la sección .horario */
+    .horario {
+        background-color: #fff; /* Fondo blanco para contraste */
+        font-family: 'Delius';
+        padding: 30px 20px;
+        max-width: 100%;
+        margin: 40px auto; /* Centrado horizontal */
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%; /* Ancho del 80% para un mejor diseño responsive */
+        position: relative;
+        top: 100px; /* Ajuste vertical para que no se solape con la barra de navegación */
+    }
+
+    /* Estilo del título dentro de .horario */
+    .horario h1 {
+        font-family: 'Delius';
+        color: #a31c5b;
+        font-size: 36px;
+        font-family: 'Sarpanch', serif;
+        margin-bottom: 20px;
+    }
+
+    /* Estilo de los elementos <ul> dentro de .horario */
+    .horario ul {
+        list-style: none; /* Eliminar los puntos de la lista */
+        padding: 0;
+        font-family: 'Delius';
+
+        margin: 0;
+    }
+
+    /* Estilo de cada elemento <li> dentro de .horario */
+    .horario ul li {
+        font-size: 20px;
+        font-family: 'Delius';
+        color: #333;
+        margin: 10px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    #horario-titulo{
+        font-family: 'Delius';
+    }
+    /* Estilo para resaltar los días laborables */
+    .horario ul li strong {
+        color: #a31c5b;
+        font-weight: bold;
+    }
+
+    /* Estilo para el texto del horario */
+    .horario ul li span {
+        font-size: 18px;
+        color: #555;
+    }
+
+    /* Hover en los días de la semana */
+    .horario ul li:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Estilo para el contenedor del botón */
+    .boton-cita {
+        text-align: center; /* Centra el botón */
+        margin-top: 30px; /* Espacio entre el horario y el botón */
+    }
+
+    /* Estilo para el botón */
+    .btn-cita {
+        background-color: #a31c5b; /* Color de fondo */
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none; /* Quita el subrayado */
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-cita:hover {
+        background-color: #c36f96; /* Cambio de color al pasar el ratón */
+    }
+
+    #psicologa {
+        font-size: 20px;
+        line-height: 1.6;
+        background-color: #c36f96;
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: 'Delius';
+        color: #ffffff;
+        margin: 2rem auto; /* Centrado automático con márgenes en los lados */
+        width: 90%; /* Hacemos que el ancho ocupe el 90% del contenedor principal */
+        max-width: 1200px; /* Limita el tamaño máximo a 1200px para pantallas grandes */
+    }
+    
+    #psicologa span {
+        font-weight: bold;
+        color: #ff6f61;
+        background-color: #fff3cd;
+        padding: 0.2rem 0.4rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    #psicologa span:hover {
+        background-color: #ffe8a1;
+        transform: scale(1.05);
+    }
+    
+
+    /* Sección Psicopedagogía */
+    .seccion-psicopedagogia {
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #c36f96; /* Fondo sin cambios */
+        border-radius: 10px;
+        max-width: 750px; /* Ajustamos el ancho máximo para la tablet */
+    }
+
+    .seccion-psicopedagogia h1 {
+        color: #5a0c32; /* Burdeos oscuro */
+        font-size: 22px; /* Tamaño ajustado */
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .seccion-psicopedagogia h2 {
+        color: #f8d7e3; /* Rosa muy claro */
+        font-size: 1rem; /* Tamaño más pequeño y legible en tablet */
+        font-weight: normal;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Sección Psicopedagogía 2 */
+    .seccion-psicopedagogia2 {
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #c36f96; /* Fondo sin cambios */
+        border-radius: 10px;
+        max-width: 750px; /* Ajustamos el ancho máximo para la tablet */
+    }
+
+    .seccion-psicopedagogia2 h1 {
+        color: #5a0c32; /* Burdeos oscuro */
+        font-size: 22px; /* Tamaño ajustado */
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .seccion-psicopedagogia2 h2 {
+        color: #f8d7e3; /* Rosa muy claro */
+        font-size: 1rem; /* Tamaño más pequeño y legible en tablet */
+        font-weight: normal;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .que-ofrecemos {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f6f6;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .que-ofrecemos h1 {
+        font-size: 38px;
+        color: #a31c5b;
+        font-family: 'Delius', cursive;
+    }
+    
+
+    .servicios-pedagogicos {
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px 0;
+    }
+    
+    /* Ajustar el tamaño de la imagen */
+    .servicios-pedagogicos img {
+        width: 100%;
+        max-width: 600px; /* Antes 450px */
+        height: auto;
+        margin-bottom: 20px;
+        margin-left: 0; /* Eliminado el desplazamiento lateral */
+        border-radius: 30px;
+        border: 5px solid #d69613;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 0.5s ease;
+    }
+    
+    /* Efecto hover */
+    .servicios-pedagogicos img:hover {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    
+    /* Separación entre imágenes */
+    .servicios-pedagogicos a {
+        margin-right: 20px;
+    }        
+
+    /* Estilos para la sección "¡Y mucho más!" */
+    .mucho-mas {
+        text-align: center;
+        margin: 40px 0;
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
+
+    .mucho-mas h2 {
+        font-size: 38px;
+        font-family: 'Delius', sans-serif;
+        color: #a31c5b;
+        margin-bottom: 10px;
+    }
+
+    .mucho-mas a {
+        color: #a31c5b;
+        text-decoration: none; /* Elimina el subrayado por defecto */
+        transition: color 0.3s; /* Efecto suave en el color */
+    }
+
+    .mucho-mas a:hover {
+        color: #a31c5b;
+        cursor: pointer;
+    }
+
+    .mucho-mas p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+        font-family: 'Delius', sans-serif;
+    }
+
+    .servicios-pedagogicos {
+        text-align: center;
+        margin: 20px 0; /* Separación arriba y abajo */
+        padding: 10px 0; /* Espacio interno */
+    }
+    
+    /* Ajustar el tamaño de la imagen */
+    .servicios-pedagogicos img {
+        width: 80%; /* Ajusta el tamaño al 80% del contenedor */
+        max-width: 150px; /* Asegura que no se haga más grande que 300px */
+        height: 300px; /* Mantiene la proporción de la imagen */
+        margin-bottom: 20px; /* Añade separación debajo de la imagen */
+        margin-left: 50px;
+        border-radius: 30px; /* Bordes redondeados */
+        border: 5px solid #d69613;
+        transform: translateY(20px); /* Las imágenes inician desplazadas hacia abajo */
+        transition: opacity 1s ease, transform 0.5s ease; /* Transición para la opacidad y movimiento */
+    }
+    
+    .servicios-pedagogicos img:hover {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    
+    .servicios-pedagogicos a {
+        margin-right: 20px;
+    }
+
+    .contacto-imagen {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        height: 450px;
+        width: auto;
+    }
+
+    .contacto-imagen img {
+        max-width: 100%;
+        height: 400px;
+        border: 5px solid #c36f96;
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .telefono {
+        display: flex;
+        font-family: 'Delius';
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+        
+        background-color: #ffffff;
+    }
+
+    .telefono > div {
+        text-align: center;
+        max-width: 140px;
+        margin: 10px 5px;
+        padding: 8px;
+        border-radius: 6px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #a31c5b;
+    }
+
+    .telefono > div:hover {
+        transform: translateY(-5px);
+    }
+
+    .telefono > div img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .telefono h2 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .telefono a {
+        color: #a31c5b;
+        text-decoration: none;
+        font-size: 12px;
+        margin-left: 150px;
+        margin-right: 0px;
+    }
+
+    .telefono a:hover {
+        color: #f871b0;
+    }
+
+    #contador-caracteres {
+        font-family: Pompiere;
+        font-size: 24px;
+    }
+    
+    .contacto-imagen {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    
+    
+    .galeria-flex {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .imagen1 {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px; /* Bordes redondeados para el contenedor */
+    }
+    
+    .imagen1 img {
+        max-width: 300px;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 10px; /* Borde redondeado solo para la imagen */
+    }
+    
+    .imagen1:hover img {
+        transform: scale(1.1);
+    }
+    
+    .imagen img {
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px; /* Bordes redondeados para el contenedor */
+        
+    }
+
+    /* Sección Quiénes Somos */
+    .contenido-quienes-somos {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0px auto 0 auto;
+        font-family: 'Delius', sans-serif;
+        color: #333;
+        line-height: 1.8;
+        background-color: transparent; /* Eliminado fondo blanco */
+        text-align: center;
+        border-radius: 10px; /* Bordes redondeados */
+        width: 90%; /* Ajuste el tamaño del contenedor */
+        font-size: 90px;
+
+    }
+
+    /* Contenedor de navegación de Quiénes Somos */
+    .nav-quienes-somos,
+    .nav-objetivos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        padding: 20px; /* Añadido relleno */
+        border-radius: 30px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        background-color: #c36f96;
+        width: 90%; /* Ajuste del tamaño */
+        max-width: 900px; /* Limita el tamaño máximo */
+        margin: 40px auto; /* Centrado con espacio alrededor */
+        font-size: 90px;
+
+    }
+
+    /* Título principal */
+    .seccion-quienes-somos-titulo h1 {
+        font-size: 1.5rem;
+        font-family: 'Delius', sans-serif;
+        color: #a31c5b;
+        margin-bottom: 10px;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    /* Descripción del título */
+    .seccion-quienes-somos-titulo p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: justify;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    /* Título de detalles */
+    .seccion-quienes-somos-detalles h2 {
+        background-color: white;
+        font-family: 'Delius', sans-serif;
+        font-size: 1.4rem;
+        color: #a31c5b;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    /* Lista de detalles */
+    .seccion-quienes-somos-detalles ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: inline-block;
+        text-align: justify;
+        margin: 0;
+        padding: 15px;
+        width: 90%;
+    }
+
+    /* Elementos de la lista de detalles */
+    .seccion-quienes-somos-detalles li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    /* Icono de cada elemento de la lista */
+    .seccion-quienes-somos-detalles li::before {
+        content: "\f058";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #5caa9c;
+    }
+
+    .imagen-quienes-somos {
+        max-width: 350px;
+        height: auto;
+        border-radius: 60px;
+    }
+
+    h1.titulo-instalaciones {
+        background-color: white;
+        width: 100%;
+        margin: 10px auto 40px auto;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+
+    h1.titulo-instalaciones2 {
+        background-color: white;
+        width: 100%;
+        margin: 150px auto 40px auto;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+    
+    .titulo2-instalaciones {
+        background-color: white;
+        width: 100%;
+        margin: 150px auto 40px auto;
+        color: #a31c5b;
+        font-family: 'Delius', sans-serif;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 2.5rem; /* Cambié el tamaño de la fuente */
+    }    
+    
+    .instalaciones {
+        display: flex;
+        justify-content: space-between; /* Distribuye los bloques uniformemente */
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+        max-width: 700px; /* Ajusta el ancho máximo del contenedor */
+        margin: 30px auto;
+        padding: 0 20px;
+        gap: 10px; /* Reduce el espacio entre los bloques */
+    }
+    
+    .instalacion-bloque {
+        flex: 1; /* Los bloques ocupan el mismo tamaño */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 10px; /* Ajusta el tamaño de la fuente a 14px */
+        max-width: 200px; /* Limita aún más el ancho de cada bloque */
+    }
+    
+    .instalacion-juegos,
+    .instalacion-aulas,
+    .instalacion-consultas {
+        font-family: 'Delius', sans-serif;
+        color: #333;
+        background-color: #fff;
+        padding: 6px 12px; /* Ajusta el relleno a 6px y 12px */
+        border-radius: 10px; /* Borda los elementos con un radio de 10px */
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Sombras más suaves */
+    }
+    
+    .galeria-instalaciones {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-items: center;
+        margin-right: 20px; /* Añade margen derecho */
+        padding-right: 20px; /* Extra opcional para separación interna */
+        box-sizing: border-box;
+    }    
+    
+    .galeria-instalaciones__item {
+        position: relative;
+        width: 100%;
+    }
+    
+    .galeria-instalaciones__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .galeria-instalaciones__img--1,
+    .galeria-instalaciones__img--2,
+    .galeria-instalaciones__img--3 {
+        height: 250px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Contenedor imagen 4 */
+    .galeria-instalaciones__item--4 {
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        box-sizing: border-box; /* asegura que el padding no rompa el ancho */
+    }
+
+    .galeria-instalaciones__img--4 {
+        height: 260px;
+        width: 630px; /* Fuerza un ancho fijo */
+        object-fit: cover;
+        border-radius: 12px;
+        margin-left: 20px; /* Mueve la imagen 4 un poquito a la derecha */
+    }
+
+    /* Imagen 6 */
+    .galeria-instalaciones__img--6 {
+        height: 260px;
+        width: 340px;
+        margin-left: -50px; /* Mueve la imagen 6 hacia la izquierda */
+        margin-right: -10px; /* Mantiene margen derecho */
+    }
+
+
+    .galeria-instalaciones__img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    
+    .instalaciones {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+        gap: 60px;
+    }
+    
+    .instalacion-bloque {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .instalacion-juegos,
+    .instalacion-aulas,
+    .instalacion-consultas {
+        font-family: 'Delius', cursive;
+        font-size: 1.4rem;
+        color: #333;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+}

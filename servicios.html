@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/IMAGENES/Icono AME Gabinete.jpg" type="image/jpg">
+    <title>AME Gabinete | Servicios</title>
+    <link rel="stylesheet" href="/CSS/tienda.css">
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <link rel="stylesheet" href="/CSS/estilo_tablet.css">
+    <link rel="stylesheet" href="/CSS/estilo_movil.css">
+    <script src="https://kit.fontawesome.com/a07349ca3f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function cambiarIdioma() {
+            var idioma = localStorage.getItem('idioma') || 'es'; 
+            
+            var textos = {
+            'es': {
+                'bienvenida': '¡Estos son los servicios que ofrecemos!',
+                'quitarDelCarrito': 'Quitar del carrito',
+                'inicio': 'Inicio',
+                'servicios': 'Servicios',
+                'quienessomos': 'Quiénes somos',
+                'contacto': 'Contáctanos',
+                'instalaciones': 'Instalaciones',
+                'quienes_somos': 'Quiénes Somos'
+            },
+            'ca': {
+                'bienvenida': 'Estos són els servicis que oferim!',
+                'quitarDelCarrito': 'Llevar del carret',
+                'inicio': 'Inici',
+                'servicios': 'Servicis',
+                'quienes_somos': 'Qui som',
+                'instalaciones': 'Instal·lacions',
+                'contacto': 'Contacta\'ns'
+      
+            },
+            'en': {
+                'bienvenida': 'These are the services we offer!',
+                'quitarDelCarrito': 'Remove from cart',
+                'inicio': 'Home',
+                'servicios': 'Services',
+                'quienes_somos': 'Who we are',
+                'instalaciones': 'Facilities',
+                'contacto': 'Contact Us',  
+            }
+
+            };
+    
+            document.getElementById('bienvenida').innerText = textos[idioma]['bienvenida'];
+            var botones = document.querySelectorAll('.add-to-cart');
+            botones.forEach(function(boton) {
+            });
+    
+            var botonesCarrito = document.querySelectorAll('.add-to-cart');
+            botonesCarrito.forEach(function(boton) {
+                if (boton.textContent === textos[idioma]['quitarDelCarrito']) {
+                    boton.textContent = textos[idioma]['solicitarInfo'];
+                }
+            });
+    
+            var navLinks = document.querySelectorAll('.nav-links a');
+            var textosNav = [
+                textos[idioma]['inicio'],
+                textos[idioma]['servicios'],
+                textos[idioma]['quienes_somos'],
+                textos[idioma]['instalaciones'],
+                textos[idioma]['contacto']
+            ];
+
+            navLinks.forEach(function(link, index) {
+                link.textContent = textosNav[index];
+            });
+
+
+    
+            document.getElementById('flag-es').style.display = (idioma === 'es') ? 'inline' : 'none';
+            document.getElementById('flag-ca').style.display = (idioma === 'ca') ? 'inline' : 'none';
+            document.getElementById('flag-en').style.display = (idioma === 'en') ? 'inline' : 'none';
+        }
+    
+        window.onload = function() {
+            cambiarIdioma(); 
+        };
+        
+    </script>
+    
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="nav-container">
+            <img src="/IMAGENES/Logo AME 2021(1).png" alt="Logo AME Gabinete" class="logo-barra" draggable="false">
+            
+            <div class="hamburger-menu" id="hamburger-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html" id="inicio">Inicio</a></li>
+                <li><a href="servicios.html" id="servicios">Servicios</a></li>
+                <li><a href="quienessomos.html" id="quienes_somos">Quiénes Somos</a></li>
+                <li><a href="Instalaciones.html" id="instalaciones">Instalaciones</a></li>
+                <li><a href="contacto.html" id="contacto">Contáctanos</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <div class="welcome-message-container">
+            <div class="welcome-message-wrapper">
+              <div class="welcome-message" id="bienvenida">
+                ¡Bienvenido a nuestra tienda!
+              </div>
+            </div>
+        </div>          
+
+        <div class="carrito-container">
+            <div class="carrito" id="carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="total-price"> x 0</span> 
+                <button id="ver-carrito" style="display:none;">Ver Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tienda">
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Atención Pedagógica.png" alt="Atención Pedagógica  (todas las etapas)">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Pruebas Acceso FP.png" alt="Pruebas Acceso FP">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/B2, C1 y C2 Valenciano.png" alt="B2, C1 y C2 Valenciano">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Atención Psicológica y Logopédica.jpg" alt="Atenció Psicológica y Logopédica">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Lengua Italiana.png" alt="Lengua Italiana (desde cero)">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Atención Temprana.png" alt="Atención Temprana">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Curso de Manipulador de Alimentos.png" alt="Curso de Manipulador de Alimentos (Online)">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Graduado Escolar.png" alt="Graduado Escolar">
+            <button class="add-to-cart">info</button>
+        </div>
+        <div class="producto">
+            <img src="/IMAGENES/Tienda/Yoga para niños.png" alt="Yoga para niños">
+            <button class="add-to-cart">info</button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/34610447906" class="whatsapp-icon" target="_blank">
+        <img src="/IMAGENES/whatsapp logo.png" alt="" class="whatsapp-icon-img">
+    </a>
+
+    <a href="tel:+34610447906" class="llamar-icon" target="_blank">
+        <img src="/IMAGENES/phone.png" alt="" class="whatsapp-icon-img">
+    </a>
+
+    <script>
+        var carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    
+        var productos = [
+            'Atención Pedagógica (todas las etapas)',
+            'Pruebas Acceso FP',
+            'B2, C1 y C2 Valenciano',
+            'Atención Psicológica y Logopédica',
+            'Lengua Italiana (desde cero)',
+            'Atención Temprana',
+            'Curso de Manipulador de Alimentos (Online)',
+            'Graduado Escolar',
+            'Yoga para niños'
+        ];
+    
+        document.getElementById('total-price').textContent = ' x ' + Object.keys(carrito).length;
+    
+        document.getElementById('ver-carrito').style.display = Object.keys(carrito).length > 0 ? 'inline' : 'none';
+    
+        document.querySelectorAll('.add-to-cart').forEach(function(button, index) {
+            if (carrito[productos[index]]) {
+                button.disabled = true;
+            }
+    
+            button.addEventListener('click', function() {
+                if (!carrito[productos[index]]) {
+                    carrito[productos[index]] = productos[index];  
+                    localStorage.setItem('carrito', JSON.stringify(carrito));  
+                    button.disabled = true;
+                    document.getElementById('total-price').textContent = ' x ' + Object.keys(carrito).length;
+                    document.getElementById('ver-carrito').style.display = 'inline'; 
+                }
+            });
+        });
+    
+        document.getElementById('ver-carrito').addEventListener('click', function() {
+            window.location.href = 'carrito.html';
+
+
+    });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.hamburger-menu').click(function () {
+                $('#nav-links').toggleClass('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

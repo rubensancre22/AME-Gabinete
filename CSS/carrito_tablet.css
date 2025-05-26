@@ -1,0 +1,180 @@
+body::before,
+body::after {
+    display: none;
+}
+
+nav {
+    margin: 10px auto;
+    padding: 10px;
+    background-color: white;
+    border: 4px solid black;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: var(--borde-redondeado);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: transparent;
+}
+
+/* Botón "Solicitar pedido" */
+.solicitar-pedido {
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.solicitar-pedido:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Botón eliminar carrito */
+.delete-cart {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-cart:hover {
+    background-color: darkred;
+}
+
+/* ======================== */
+/* SECCIÓN DE BIENVENIDA */
+/* ======================== */
+.Bienvenido {
+    color: var(--color-texto);
+    background-color: white;
+    margin: 20px auto;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Sarpanch", serif;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Bienvenido h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* ======================== */
+/* CARRITO DE COMPRAS */
+/* ======================== */
+.contenedor-carrito {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-fondo);
+    border-radius: var(--borde-redondeado);
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--color-fondo-item);
+    border-radius: 5px;
+    max-width: 92%;
+}
+
+.cart-item span {
+    font-size: 1rem;
+}
+
+/* Botones de carrito */
+.change-item, .remove-item {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+.change-item {
+    background-color: var(--color-boton);
+}
+
+.change-item:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.remove-item {
+    background-color: var(--color-eliminar);
+}
+
+.remove-item:hover {
+    background-color: var(--color-eliminar-hover);
+}
+
+/* ======================== */
+/* BOTÓN VOLVER A LA TIENDA */
+/* ======================== */
+#back-to-shop {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ======================== */
+/* MEDIA QUERIES */
+/* ======================== */
+@media (min-width: 700px) and (max-width: 1260px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
