@@ -91,7 +91,7 @@
     padding: 10px;
     z-index: 1001;
     background-color: transparent; /* Fondo transparente */
-    transform: translateX(-70%); /* Mueve el icono un 10% a la izquierda */
+    transform: translateX(-0%); /* Mueve el icono un 10% a la izquierda */
 }
 
 
@@ -336,7 +336,7 @@
     .idioma-selector {
         position: fixed;
         top: 820px;
-        right: 40px;
+        right: 10px;
         padding: 10px 15px;
         border-radius: 8px;
         z-index: 1001;
