@@ -152,8 +152,8 @@
 
     .welcome-message {
         text-align: center;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
         margin-bottom: 20px;
         padding: 20px;
         color: #a31c5b;
@@ -336,6 +336,7 @@
         height: 40px;
         object-fit: cover;
     }
+    
     
     /* Estilo para el selector de idiomas */
     .idioma-selector {
