@@ -291,15 +291,16 @@
     /* Estilo para el selector de idiomas */
     .idioma-selector {
         position: fixed;
-        top: 50px; /* Aumenta este valor para bajarlo más */
-        right: 0px;
+        top: 90px; /* Aumenta este valor para bajarlo más */
+        right: 5px;
         padding: 10px 15px;
         border-radius: 8px;
         z-index: 1001;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100px; /* Ajustar el ancho del contenedor */
+        width: 120px; /* Ajustar el ancho del contenedor */
+        background-color: white;
     }
 
     .idioma-selector label {
@@ -308,7 +309,7 @@
     }
 
     .idioma-selector .bandera {
-        width: 20px;
+        width: 30px;
         height: auto;
         margin-right: 5px;
         cursor: pointer; /* Asegura que la bandera sea clickeable */
