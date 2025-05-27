@@ -544,6 +544,7 @@
     font-family: 'Delius', sans-serif;
     color: #a31c5b;
     margin-bottom: 10px;
+    margin-right: 30px;
     }
 
     .mucho-mas a {
@@ -581,7 +582,7 @@
     color: #b30053; /* Color del texto */
     font-family: 'Delius', serif;
     margin: 0;
-    font-family: 'Delius', cursive; /* Aplicar la fuente Delius */
+    margin-right: 50px;
     }
 
     #opiniones-titulo {
@@ -672,8 +673,6 @@
         border-radius: 30px; /* Menor radio para una apariencia más sutil */
     }
     
-
-
     .Bienvenido {
         text-align: center;
         background-color: #ffffff; /* Fondo de la sección */
@@ -684,16 +683,21 @@
         font-size: 20px;
         margin-top: 40px;
 
-      }
-      
-      .Bienvenido h1 {
+    }
+    
+    #bienvenida{
+        font-size: 25px;
+        margin-right: 40px;
+    }
+
+    .Bienvenido h1 {
         font-size: 38px;
         color: #b30053; /* Color del texto */
         font-family: 'Delius', cursive; /* Aplicar la fuente Delius */
         margin: 0;
-      }
+    }
      
-      .horario {
+    .horario {
         background: white;
         border-radius: 0;
         width: 100%; /* Ocupa todo el ancho */
@@ -780,7 +784,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px;
+        gap: 0px;
         background-color: #ffffff;
         width: 100%; /* Ocupa todo el ancho */
         margin: 40px 0 0 0; /* Margen superior, sin márgenes laterales */
@@ -828,10 +832,10 @@
 
     .contacto-imagen img {
         max-width: 100%;
-        width: 600px; /* O ajusta a 300px, 250px según lo que necesites */
-        height: 400px;
+        width: 350px; /* O ajusta a 300px, 250px según lo que necesites */
+        height: 250px;
         display: block;
-        margin: 0 auto; /* Centra la imagen horizontalmente */
+        margin: 90 auto; /* Centra la imagen horizontalmente */
         border-radius: 10px; /* Opcional: bordes redondeados suaves */
     }
     
