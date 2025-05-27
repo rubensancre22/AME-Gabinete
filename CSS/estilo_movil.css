@@ -671,84 +671,8 @@
         height: auto;
         border-radius: 30px; /* Menor radio para una apariencia más sutil */
     }
+    
 
-    h1.titulo-instalaciones {
-        background-color: white;
-        max-width: 100%;
-        color: #a31c5b;
-        font-family: 'Delius', sans-serif;
-        text-align: center;
-        font-size: 25px;
-        padding: 20px 0;
-    }
-
-    .instalaciones {
-        display: flex;
-        justify-content: space-between; /* Distribuye los bloques uniformemente */
-        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
-        max-width: 700px; /* Ajusta el ancho máximo del contenedor */
-        margin: 30px auto;
-        padding: 0 20px;
-        gap: 10px; /* Reduce el espacio entre los bloques */
-    }
-    .instalacion-bloque {
-        max-width: 100%; /* Asegura que los bloques no se excedan del ancho */
-        text-align: center;
-    }
-
-    .instalacion-juegos,
-    .instalacion-aulas,
-    .instalacion-consultas {
-        font-size: 1rem; /* Reducido para adaptarse a pantallas pequeñas */
-        padding: 10px 15px; /* Menos relleno */
-    }
-
-    .galeria-instalaciones {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 20px;
-    }
-
-    .galeria-instalaciones__img--1,
-    .galeria-instalaciones__img--2,
-    .galeria-instalaciones__img--3 {
-        height: 200px; /* Menor altura */
-        margin-left: 0; /* Eliminar márgenes innecesarios */
-        margin-right: 0; /* Eliminar márgenes innecesarios */
-    }
-
-    .galeria-instalaciones__item--4 {
-        grid-column: span 2; /* Ocupa toda la fila */
-        display: flex;
-        justify-content: center;
-    }
-
-    .galeria-instalaciones__img--4 {
-        width: 100%; /* Usar el 100% de ancho */
-        height: 200px; /* Ajuste la altura */
-    }
-
-    .galeria-instalaciones__img--6 {
-        height: 200px;
-        width: 100%; /* Usar el 100% de ancho */
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .galeria-instalaciones__img:hover {
-        transform: scale(1.05); /* Menos zoom en pantallas pequeñas */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombras más suaves */
-    }
-
-    /* Asegurarse de que las imágenes no se excedan del ancho disponible */
-    .galeria-instalaciones__img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
 
     .Bienvenido {
         text-align: center;
@@ -998,33 +922,37 @@
     }
       
     .galeria-instalaciones__img--1 {
-        height: 300px;
-        margin-left: -20px;
+        height: 250px;
+        margin-left: 110px;
     }
       
     .galeria-instalaciones__img--2 {
-        height: 300px;
-        margin-left: 0px;
+        height: 250px;
+        margin-left: 100px;
+        margin-top: 30px;
     }
       
     .galeria-instalaciones__img--3 {
-        height: 300px;
-        margin-left: 10px;
+        height: 250px;
+        margin-right: 300px;
+        margin-left: -310px;
+        margin-top: 290px;
         
     }
       
     /* Foto 4, forzada a ser horizontal */
     .galeria-instalaciones__img--4 {
-        height: 300px;
-        width: 400px;
-        margin-left: 190px;
+        height: 200px;
+        width: 350px;
+        margin-left: 420px;
         margin-top: 40px;
     }
           
     .galeria-instalaciones__img--6 {
-        height: 300px;
-        margin-top: 40px;
-        margin-left: 10px;
+        height: 250px;
+        margin-right: 300px;
+        margin-left: -110px;
+        margin-top: -490px;
     }
       
     .galeria-instalaciones__img:hover {
